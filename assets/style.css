@@ -177,9 +177,7 @@ nav > ul > li {
   padding: 5px 10px;
 }
 
-/* .......................................................................... */
-
-/* Notify */
+/*! Notify....................................................................... */
 
 .header-notify {
   display: none;
@@ -188,6 +186,7 @@ nav > ul > li {
   right: 0;
   background-color: #333;
   width: 420px;
+  z-index: 1;
 }
 
 .header__notify-img {
@@ -196,18 +195,13 @@ nav > ul > li {
   margin-right: 5px;
 }
 
-.header__notify-header {
-}
-
 .header__notify-header h3 {
+  padding-left: 10px;
   font-size: 1.6rem;
 }
 
 .header__notify-list {
   padding-left: 0;
-}
-
-.header__notify-item {
 }
 
 .header__notify-link {
@@ -236,10 +230,10 @@ nav > ul > li {
   display: flex;
   justify-content: center;
 }
-/* modal log in ----------------------------------- */
+/*! modal log in ----------------------------------- */
 .modal {
   position: fixed;
-  display: flex !important;
+  display: none;
 }
 
 .modal__overlay {
@@ -254,9 +248,19 @@ nav > ul > li {
 .modal-header {
   font-size: 2rem !important;
 }
+.modal-body {
+  min-width: 500px;
+}
 .modal-header__list {
   width: 100%;
+  padding-left: 0;
 }
+.modal-header__link {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+}
+
 .modal-header a {
   color: var(--black-color) ;
   text-decoration: none;
@@ -265,17 +269,47 @@ nav > ul > li {
   width: 200px;
   height: 200px;
 }
-.form-control {
-  display: flex !important;
-  flex-direction: column;
+.from-signUp {
+    display: none;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   font-size: 1.4rem !important;
 }
+
+.form-logIn {
+   display: none;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-size: 1.4rem !important;
+} 
 .form__group {
   display: flex;
   flex-direction: column;
 }
 .form-label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .forgot-link {
   color: #666;
@@ -283,8 +317,16 @@ nav > ul > li {
 .forgot-link:hover {
   color: var(--text-color);
 }
-
-/* ************************************* */
+.form-message {
+  font-size: 1.1rem;
+}
+.invalid {
+  outline: 1px solid rgb(250, 0, 0);
+}
+.open{
+  display: block;
+}
+/* ------------------------------- */
 
 #content {
   font-size: 1.4rem;
@@ -418,8 +460,7 @@ nav > ul > li {
   width: 400px;
   height: 400px;
 }
-.contact-card {
-}
+
 .input {
   width: 500px;
   border: none;
@@ -550,7 +591,14 @@ nav > ul > li {
 .navbar-list__icon {
   font-size: 2rem !important;
 }
-
+.navbar-list__link {
+  font-size: 1.8rem;
+  
+}
+.navbar-list__link:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
 .media-social-list li {
   padding: 2px 10px;
   color: var(--white-color);
@@ -590,3 +638,4 @@ nav > ul > li {
   display: flex;
   justify-content: center;
 }
+

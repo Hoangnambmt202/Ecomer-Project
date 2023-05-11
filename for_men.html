@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./for_girl.html">
     <link rel="stylesheet" href="./sale.html">
     <link rel="stylesheet" href="./contact.html">
+    
     <title>Hoàng Nam Store</title>
   </head>
   <body>
@@ -162,8 +163,7 @@
                 </div>
               </li>
               <li><a href="/news-fashion.html">News</a></li>
-              <li><a href="">Log in</a></li>
-              <li><a href="">Sign Up</a></li>
+              <li><i class="navbar-list__link fa-solid fa-circle-user"></i></li>
             </ul>
           </nav>
 
@@ -180,6 +180,92 @@
             <div class="search__cart">
               <a href="#"><i class="fa-solid fa-heart"></i></a>
               <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+
+            <div class="modal top-0 bottom-0 start-0 end-0">
+              <div class="modal__overlay">
+              </div>
+              <div class="modal-dialog">
+                <div class="modal-content ">
+                  <div class="modal-header">
+                    <ul class="d-flex modal-header__list">
+                      <li class="col-6 text-center"><button class="modal-header__link modal-header__link-logIn">Log In</button></li>
+                      <li class="col-6 text-center"><button class="modal-header__link modal-header__link-signUp">Sign Up</button></li>
+                    </ul>
+                     
+                  </div>
+                  <div class="modal-body">
+    <!-- form đăng kí -->
+                    <form class="from-signUp js-from-signUp" action="">
+                      <div class="form__group">
+                        <label class="form-label" for="">Full name</label>
+                        <input required type="text" name="" id="">
+                      </div>
+                      <div class="form__group">
+                        <label class="form-label" for="">Email</label>
+                        <input required type="email" name="" id="">
+                      </div>
+                      <div class="d-flex justify-content-between" >
+                        <span class="form-label">Sex</span>
+                        <span class="form-label">Nationality</span>
+                      </div>
+                      <div class="toast-header d-flex justify-content-between">
+                        <select name="" id="" class="form-check col-5">
+                          <option value="">Male</option>
+                          <option value="">Female</option>
+                        </select>
+                        <select name="" id="" class="form-check col-5">
+                          <option value="">Vietnamese</option>
+                          <option value="">English</option>
+                          <option value="">American</option>
+                          <option value="">Australia</option>
+                          <option value="">Canada</option>
+                          <option value="">China</option>
+                          <option value="">Colombia</option>
+                        </select>
+                      </div>
+                      <div class="form__group">
+                        <label class="form-label" for="">Password</label>
+                        <input required type="password" name="" id="">
+                      </div>
+                      <div class="form__group">
+                        <label class="form-label" for="">Confirm password</label>
+                        <input required type="password" name="" id="">
+                      </div>
+                      
+                      <div class="d-flex justify-content-between">
+                        <button class="btn btn-submit">SEND</button>
+                        <button class="btn btn-cancel">CANCEL</button>
+                      </div>
+                    </form>
+    <!-- form đăng nhập -->
+                    <form class=" form-logIn js-from-logIn" action="" id="form-control">
+                      <div class="form__group">
+                        <label class="form-label" for="full-name">Full name</label>
+                        <input required type="text" name="full-name" id="full-name">
+                        <span class="form-message"></span>
+                      </div>
+                      <div class="form__group">
+                        <label class="form-label" for="email">Email</label>
+                        <input required type="email" name="email" id="email">
+                        <span class="form-message"></span>
+                      </div>
+                      <div class="form__group">
+                        <label class="form-label" for="password">Password</label>
+                        <input required type="password" name="password" id="password">
+                        <span class="form-message"></span>
+                      </div>
+                      <a class="forgot-link" href="">Forgot Password?</a>
+                      <div class="d-flex justify-content-between">
+                        <button class="btn btn-submit">SEND</button>
+                        <button class="btn btn-cancel">CANCEL</button>
+                      </div>
+                    </form>
+                  </div>         
+                  <div class="modal-footer"></div> 
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -595,9 +681,8 @@
       </footer>
     </section>
 
-    <script>
-      
-    </script>
+    <script src="/Ecomer.js"></script>
+    <script src="/Validator.js"></script>
     
   </body>
 </html>

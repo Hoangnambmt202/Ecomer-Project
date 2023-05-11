@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link rel="stylesheet" href="/assets/static/Dosis-Bold.ttf">
-    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha2-dist/css/bootstrap-grid.css"/>
     <link rel="stylesheet" href="./assets/reponsive.css">
+    <link rel="stylesheet" href="/assets/font/static/Dosis-Regular.ttf">
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha2-dist/css/bootstrap-grid.css"/>
     <link rel="stylesheet" href="./bootstrap-5.3.0-alpha2-dist/css/bootstrap.min.css"/>
     <script src="/bootstrap-5.3.0-alpha2-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="/index.html">
     <link rel="stylesheet" href="/for_men.html">
     <link rel="stylesheet" href="/for_girl.html">
-    <link rel="stylesheet" href="/sale.html">
+    <link rel="stylesheet" href="/sale_off.html">
     <link rel="stylesheet" href="/contact.html">
-    <script src="/Ecomer.js"></script>
+    <link rel="stylesheet" href="/news-fashion.html">
+    
     <title>Hoàng Nam Store</title>
   </head>
   <body>
@@ -108,7 +109,7 @@
                           src="https://i.pinimg.com/474x/30/41/e6/3041e6d7d526cc5b53cc557c1e5b0a36.jpg"
                           class="header__notify-img"
                           alt=""
-                        />
+                      >
                         <div class="header__notify-info">
                           <span class="">
                             Sản phẩm của bạn đang giảm giá !!! vào chốt ngay
@@ -164,8 +165,8 @@
                 </div>
               </li>
               <li><a href="/news-fashion.html">News</a></li>
-              <li><a href="">Log in</a></li>
-              <li><a href="">Sign Up</a></li>
+              <li><i class=" navbar-list__link fa-solid fa-circle-user"></i></li>
+              
             </ul>
           </nav>
   
@@ -188,20 +189,19 @@
 
         <div class="modal top-0 bottom-0 start-0 end-0">
           <div class="modal__overlay">
-
           </div>
           <div class="modal-dialog">
             <div class="modal-content ">
-              
               <div class="modal-header">
                 <ul class="d-flex modal-header__list">
-                  <li class="col-6 text-center"><a href="" class="modal-header__link">Log In</a></li>
-                  <li class="col-6 text-center"><a href="" class="modal-header__link">Sign Up</a></li>
+                  <li class="col-6 text-center"><button class="modal-header__link modal-header__link-logIn">Log In</button></li>
+                  <li class="col-6 text-center"><button class="modal-header__link modal-header__link-signUp">Sign Up</button></li>
                 </ul>
                  
               </div>
               <div class="modal-body">
-                <form class="form-control" action="">
+<!-- form đăng kí -->
+                <form class="from-signUp js-from-signUp" action="">
                   <div class="form__group">
                     <label class="form-label" for="">Full name</label>
                     <input required type="text" name="" id="">
@@ -233,15 +233,38 @@
                     <label class="form-label" for="">Password</label>
                     <input required type="password" name="" id="">
                   </div>
-                  <!-- <span class="show-btn"><i class="fas fa-eye"></i></span> -->
-                  <label class="form-label" for="">Confirm password</label>
-                  <input required type="password" name="" id="">
+                  <div class="form__group">
+                    <label class="form-label" for="">Confirm password</label>
+                    <input required type="password" name="" id="">
+                  </div>
+                  
+                  <div class="d-flex justify-content-between">
+                    <button class="btn btn-submit">SEND</button>
+                    <button class="btn btn-cancel">CANCEL</button>
+                  </div>
+                </form>
+<!-- form đăng nhập -->
+                <form class=" form-logIn js-from-logIn" action="" id="form-control">
+                  <div class="form__group">
+                    <label class="form-label" for="full-name">Full name</label>
+                    <input required type="text" name="full-name" id="full-name">
+                    <span class="form-message"></span>
+                  </div>
+                  <div class="form__group">
+                    <label class="form-label" for="email">Email</label>
+                    <input required type="email" name="email" id="email">
+                    <span class="form-message"></span>
+                  </div>
+                  <div class="form__group">
+                    <label class="form-label" for="password">Password</label>
+                    <input required type="password" name="password" id="password">
+                    <span class="form-message"></span>
+                  </div>
                   <a class="forgot-link" href="">Forgot Password?</a>
                   <div class="d-flex justify-content-between">
                     <button class="btn btn-submit">SEND</button>
                     <button class="btn btn-cancel">CANCEL</button>
                   </div>
-                  
                 </form>
               </div>         
               <div class="modal-footer"></div> 
@@ -581,9 +604,9 @@
       </footer>
     </section>
 
-    <script>
-      
-    </script>
+    <script src="./Validator.js"></script>
+    <script src="./Ecomer.js"></script>
+   
     
   </body>
 </html>
